@@ -5,8 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Make sure the hero section uses the correct image and covers the whole background,
+         but leaves a white bar at the top */
+      .hero {
+        background-image: url('img/9418_Malawi_2013_TylerRiewer-.jpg');
+        background-size: cover;
+        background-position: center top 40px; /* Move image down by 40px */
+        height: 100vh;
+        position: relative;
+      }
+      /* Add a white bar at the top */
+      .top-bar {
+        width: 100%;
+        height: 48px; /* Make the bar tall enough for the logo */
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        padding-left: 40px; /* Add some space on the left */
+        justify-content: space-between; /* Space between logo and links */
+      }
+      .top-links {
+        display: flex;
+        gap: 20px; /* Space between links */
+        padding-right: 40px; /* Space on the right */
+      }
+      .top-links a {
+        color: #000;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        transition: color 0.2s, transform 0.2s;
+      }
+      .top-links a:hover {
+        text-decoration: underline;
+        color: #ffe600; /* Use the same yellow as the CW logo */
+        transform: scale(1.08);
+      }
+      /* Remove background and padding from logo in header */
+      .logo {
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+      /* Make sure header is below the white bar */
+      header {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+      }
+      /* Make the logo image fit nicely in the white bar */
+      .logo-img {
+        height: 32px;
+        vertical-align: middle;
+        transition: transform 0.2s; /* Smooth transition for logo */
+      }
+      .logo-img:hover {
+        transform: scale(1.08) rotate(-3deg); /* Fun effect on logo hover */
+      }
+      /* Responsive styles for smaller screens */
+      @media (max-width: 600px) {
+        .top-bar {
+          flex-direction: column;
+          align-items: flex-start;
+          height: auto;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .top-links {
+          gap: 12px;
+          padding-right: 0;
+          padding-top: 8px;
+          flex-wrap: wrap;
+        }
+        .logo-img {
+          height: 28px;
+        }
+        .hero {
+          background-position: center top 28px;
+        }
+        .text-box {
+          padding-right: 0;
+          padding-left: 0;
+          max-width: 100%;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.95rem;
+        }
+        .top-links a {
+          font-size: 0.95rem;
+        }
+      }
+      .cta-button {
+        /* If you add this button back, it will have a hover effect */
+        transition: background 0.2s, transform 0.2s;
+      }
+      .cta-button:hover {
+        background: #ffd54f;
+        color: #002f5f;
+        transform: scale(1.05);
+      }
+      .overlay {
+        /* Add a slight fade-in effect for the overlay */
+        animation: fadeIn 1s;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .join-button {
+        background-color: #ffe600; /* Same yellow as logo */
+        color: #002f5f;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+      }
+      .join-button:hover {
+        background: #fff176;
+        color: #000;
+        transform: scale(1.05);
+      }
+    </style>
 </head>
 <body>
-    <!-- Add your HTML here -->
+    <!-- White bar at the top of the page with the logo and navigation links -->
+    <div class="top-bar">
+      <!-- Show the logo in the white bar -->
+      <img src="img/cw_logo-2.png" alt="Charity:Water Logo" class="logo-img">
+      <!-- Navigation links at the top right -->
+      <nav class="top-links">
+        <!-- Simple navigation links for beginners -->
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <!-- Header (now empty, kept for structure) -->
+    <header>
+        <!-- Free Trial button removed -->
+    </header>
+
+    <!-- Hero section with text overlay (text centered or left, not on the right side) -->
+    <section class="hero">
+        <div class="overlay">
+            <div class="text-box">
+                <h1>Invest in <span class="highlight">Impact.</span> See the <span class="highlight">Change</span></h1>
+                <p>Every dollar funds clean water—and you'll see where it goes with full transparency and measurable results.</p>
+                <!-- Join Us button for users to get involved -->
+                <button class="join-button">Join Us</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

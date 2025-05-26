@@ -1,19 +1,85 @@
-/* charity: water Brand Colors & Fonts
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+body, html {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  height: 100%;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #002f5f;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
 
-*/
+.icon {
+  margin-right: 8px;
+}
+
+.cta-button {
+  background-color: #f9a825;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero {
+  /* Use the .jpg image for the background */
+  background-image: url(images/9418_Malawi_2013_TylerRiewer-.jpg); /* Background image for hero section */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.text-box {
+  max-width: 600px;
+  text-align: right;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: white;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
